@@ -15,6 +15,7 @@ configure the Nginx web server on it.
 | File | Description |
 | ---- | ----------- |
 | `0-transfer_file` | Transfer a file to a user's home directory on a server with `scp`, with strict host key checking disabled |
+| `1-install_nginx_web_server` | Install Nginx on a new Ubuntu machine, listening on port 80 and serving a page containing `Holberton School` |
 
 ## Usage
 
@@ -23,4 +24,9 @@ $ ./0-transfer_file
 Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
 $ ./0-transfer_file some_page.html 8.8.8.8 ubuntu ~/.ssh/school
 some_page.html                                100%   12     0.1KB/s   00:00
+
+# on the server, as root
+$ ./1-install_nginx_web_server > /dev/null 2>&1
+$ curl localhost
+Holberton School for the win!
 ```
