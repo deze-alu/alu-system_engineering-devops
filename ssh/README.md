@@ -16,3 +16,4 @@ server with SSH and RSA key pairs.
 | ---- | ----------- |
 | `0-use_a_private_key` | Connect to the server with the private key `~/.ssh/school` as the `ubuntu` user |
 | `1-create_ssh_key_pair` | Create a 4096-bit RSA key pair named `school`, protected by the passphrase `betty` |
+| `2-ssh_config` | SSH client configuration that uses the private key `~/.ssh/school` and refuses password authentication |
