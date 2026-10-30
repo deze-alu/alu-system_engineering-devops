@@ -18,6 +18,7 @@ configure the Nginx web server on it.
 | `1-install_nginx_web_server` | Install Nginx on a new Ubuntu machine, listening on port 80 and serving a page containing `Holberton School` |
 | `3-redirection` | Same as `1-install_nginx_web_server`, plus `/redirect_me` returns a `301 Moved Permanently` redirect |
 | `4-not_found_page_404` | Same as `3-redirection`, plus a custom 404 page containing `Ceci n'est pas une page` |
+| `5-design_a_beautiful_404_page.html` | A simple custom 404 page containing `Ceci n'est pas une page` |
 
 ## Usage
 
