@@ -16,6 +16,7 @@ configure the Nginx web server on it.
 | ---- | ----------- |
 | `0-transfer_file` | Transfer a file to a user's home directory on a server with `scp`, with strict host key checking disabled |
 | `1-install_nginx_web_server` | Install Nginx on a new Ubuntu machine, listening on port 80 and serving a page containing `Holberton School` |
+| `3-redirection` | Same as `1-install_nginx_web_server`, plus `/redirect_me` returns a `301 Moved Permanently` redirect |
 
 ## Usage
 
@@ -29,4 +30,8 @@ some_page.html                                100%   12     0.1KB/s   00:00
 $ ./1-install_nginx_web_server > /dev/null 2>&1
 $ curl localhost
 Holberton School for the win!
+
+$ curl -sI localhost/redirect_me/
+HTTP/1.1 301 Moved Permanently
+Location: https://www.youtube.com/watch?v=QH2-TGUlwu4
 ```
