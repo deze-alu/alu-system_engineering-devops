@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Install HAProxy and distribute traffic between web-01 and web-02 using roundrobin
+apt-get update -y
+apt-get install -y haproxy
+
+if ! grep -q "^ENABLED=1" /etc/default/haproxy; then
+    echo "ENABLED=1" >> /etc/default/haproxy
+fi
+
+if ! grep -q "backend web_backend" /etc/haproxy/haproxy.cfg; then
+    cat >> /etc/haproxy/haproxy.cfg <<'EOF'
+
+frontend web_frontend
+    bind *:80
+    default_backend web_backend
+
+backend web_backend
+    balance roundrobin
+    server 7268-web-01 13.135.166.215:80 check
+    server 7268-web-02 18.133.221.184:80 check
+EOF
+fi
+
+service haproxy restart

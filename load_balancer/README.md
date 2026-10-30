@@ -23,6 +23,7 @@ header and put both web servers behind an HAProxy load balancer.
 | File | Description |
 | ---- | ----------- |
 | `0-custom_http_response_header` | Configure Nginx like web-01 and add an `X-Served-By` response header containing the server's hostname |
+| `1-install_load_balancer` | Install HAProxy on lb-01 and distribute traffic between web-01 and web-02 using roundrobin |
 
 ## Usage
 
@@ -30,5 +31,10 @@ header and put both web servers behind an HAProxy load balancer.
 $ curl -sI 13.135.166.215 | grep X-Served-By
 X-Served-By: 7268-web-01
 $ curl -sI 18.133.221.184 | grep X-Served-By
+X-Served-By: 7268-web-02
+
+$ curl -sI 35.177.182.1 | grep X-Served-By
+X-Served-By: 7268-web-01
+$ curl -sI 35.177.182.1 | grep X-Served-By
 X-Served-By: 7268-web-02
 ```
