@@ -8,6 +8,7 @@ University (ALU) software engineering program.
 | Directory | Description |
 | --------- | ----------- |
 | [ssh](./ssh) | Connect to a remote server with SSH, create RSA key pairs, and configure the SSH client |
+| [web_server](./web_server) | Transfer files to a server and install and configure the Nginx web server |
 
 ## Requirements
 
