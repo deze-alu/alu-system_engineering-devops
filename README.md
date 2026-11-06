@@ -10,6 +10,7 @@ University (ALU) software engineering program.
 | [ssh](./ssh) | Connect to a remote server with SSH, create RSA key pairs, and configure the SSH client |
 | [web_server](./web_server) | Transfer files to a server and install and configure the Nginx web server |
 | [load_balancer](./load_balancer) | Add a second web server with a custom response header and load balance both with HAProxy |
+| [firewall](./firewall) | Install ufw and block all incoming traffic except SSH, HTTP and HTTPS |
 
 ## Requirements
 
